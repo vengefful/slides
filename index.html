@@ -8,7 +8,8 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/serif.css">
+		<link rel="stylesheet" href="dist/slide.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -16,8 +17,195 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section><h1>Função Afim</h1></section>
+				<section>
+					<section>
+						<h2>A temperatura de uma substância é $30\degree C$.</h2>
+						<h3>Vamos analisar as duas situações distintas.</h3>
+					</section>
+					<section>
+						<h1>Situação 1</h1>
+						<p>Sua temperatura varia com o tempo de maneira uniforme, aumentando $10\degree C$ por minuto.</p>
+						<p>Observe as temperaturas, medidas minuto a minuto.</p>
+						<table class="table1" style="background-color: yellowgreen;">
+							<tr>
+								<td>$t(min)$</td>
+								<td>$0$</td>
+								<td>$1$</td>
+								<td>$2$</td>
+								<td>$3$</td>
+								<td>$4$</td>
+								<td>$5$</td>
+							</tr>
+							<tr>
+								<td>$T(\degree C)$</td>
+								<td>$30$</td>
+								<td>$40$</td>
+								<td>$50$</td>
+								<td>$60$</td>
+								<td>$70$</td>
+								<td>$80$</td>
+							</tr>
+						</table>
+						<p>A taxa de variação da temperatura é positiva $(10\degree C/min)$.</p>
+						<p>Após $t$ minutos, a temperatura $T$ da substância em $\degree C$ é:</p>
+						<div class="math-response-block">
+							<p>$T = 30 + 10 \cdot t$</p>
+						</div>
+					</section>
+					<section>
+						<h1>Situação 2</h1>
+						<p>Sua temperatura varia com o tempo de maneira uniforme, aumentando $10\degree C$ por minuto.</p>
+						<p>Observe as temperaturas, medidas minuto a minuto.</p>
+						<table class="table1" style="background-color: yellowgreen;">
+							<tr>
+								<th>$t(min)$</td>
+								<td>$0$</td>
+								<td>$1$</td>
+								<td>$2$</td>
+								<td>$3$</td>
+								<td>$4$</td>
+								<td>$5$</td>
+							</tr>
+							<tr>
+								<th>$T(\degree C)$</td>
+								<td>$30$</td>
+								<td>$20$</td>
+								<td>$10$</td>
+								<td>$0$</td>
+								<td>$-10$</td>
+								<td>$-20$</td>
+							</tr>
+						</table>
+						<p>A taxa de variação da temperatura é positiva $(10\degree C/min)$.</p>
+						<p>Após $t$ minutos, a temperatura $T$ da substância em $\degree C$ é:</p>
+						<div class="math-response-block">
+							<p>$T = 30 - 10 \cdot t$</p>
+						</div>
+					</section>
+					<section>
+						<h1>Veja o gráfico da situação 1</h1>
+						<div id="flex-container0">
+							<div class="flex-item0" id="flex0">
+								<table class="table1">
+									<tr>
+										<th>$t(min)$</th>
+										<th>$T(\degree C)$</th>
+									</tr>
+									<tr>
+										<td>$0$</td>
+										<td>$30$</td>
+									</tr>
+									<tr>
+										<td>$1$</td>
+										<td>$40$</td>
+									</tr>
+									<tr>
+										<td>$2$</td>
+										<td>$50$</td>
+									</tr>
+									<tr>
+										<td>$3$</td>
+										<td>$60$</td>
+									</tr>
+									<tr>
+										<td>$4$</td>
+										<td>$70$</td>
+									</tr>
+									<tr>
+										<td>$5$</td>
+										<td>$80$</td>
+									</tr>
+								</table>
+								<p class="math-response-block">$T = 30 + 10 \cdot t$</p>
+							</div>
+							<div class="flex-item0" id="flex1">
+								<img src="figures/grafico1.png" alt="">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h1>Veja o gráfico da situação 2</h1>
+						<div id="flex-container0">
+							<div class="flex-item0" id="flex0">
+								<table class="table1">
+									<tr>
+										<th>$t(min)$</th>
+										<th>$T(\degree C)$</th>
+									</tr>
+									<tr>
+										<td>$0$</td>
+										<td>$30$</td>
+									</tr>
+									<tr>
+										<td>$1$</td>
+										<td>$20$</td>
+									</tr>
+									<tr>
+										<td>$2$</td>
+										<td>$10$</td>
+									</tr>
+									<tr>
+										<td>$3$</td>
+										<td>$0$</td>
+									</tr>
+									<tr>
+										<td>$4$</td>
+										<td>$-10$</td>
+									</tr>
+									<tr>
+										<td>$5$</td>
+										<td>$-20$</td>
+									</tr>
+								</table>
+								<p class="math-response-block">$T = 30 - 10 \cdot t$</p>
+							</div>
+							<div class="flex-item0" id="flex1">
+								<img src="figures/grafico2.png" alt="">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>Função Afim ou Função Polinomial do Primeiro Grau é toda função do tipo:</h2>
+						<div class="math-response-block" style="margin: 5%;">
+							<p>$y = f(x) = ax + b$</p>
+							<p>Em que <b>$a$</b> e $b$ são números reais, com $a \neq 0$.</p>
+						</div>
+						<p style="margin-top: 5%;">Se $b = 0$, temos a função $y = f(x) = ax$, chamada, também, <b>função linear</b>.</p>
+					</section>
+					<section>
+						<div id="exemplos-1-grau">
+							<div style="flex: 1 auto; text-align: left; padding-left: 5%;">
+								<h3>Exemplos:</h3>
+							</div>
+							<div style="flex: 1 auto; height: 500px; text-align: left; padding-top: 5%; padding-left: 7%;">
+								<ul>
+									<li>$y = 5x -3$</li>
+									<p>é uma função afim, com $a = 5$ e $b = -3$</p>
+									<li>$y = \frac{x}{5} + \sqrt{3}$</li>
+									<p>é uma função afim, com $a = \frac{1}{5}$ e $b = \sqrt{3}$.</p>
+									<li>$y = -x + \frac{1}{2}$</li>
+									<p>é uma função afim, com $a=-1$ e $b=\frac{1}{2}$.</p>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section>
+						<h3>Características da função afim $y = ax + b$</h3>
+						<ul style="padding-top: 3%;" class="lista1grau">
+							<li>A fórmula que a define é um polinômio de $1\degree grau$; seu termo independente pode ser nulo ou não.</li>
+							<li>Se $b = 0$, temos a função $f(x)=ax$, chamada de função linear.</li>
+							<li>A constante real $a$, não-nula, é chamado de <i><b>coeficiente angular</b></i>. Ela é a mesma,
+							qualquer que seja o intervalo considerado.</li>
+							<li>A constante real $b$ é chamado de <i><b>coeficiente linear</b></i>.</li>
+							<li>Seu <b>gráfico cartesiano</b> é uma <b>linha reta</b>, não paralela aos eixos das abscissa e ordenada. Ela pode 
+							pode conter a origem (caso $b = 0$) ou não pode conter a origem (caso $b \neq 0$).</li>
+							<li>O <b>crescimento</b> ou <b>decrescimento</b> da função estão relacionados com o sinal de $a$.</li>
+							<li>A reta é <b>crescente</b> para $a > 0$ e <b>decrescente</b> para $a < 0$.</li>
+						</ul>
+					</section>
+				</section>
+
 			</div>
 		</div>
 
@@ -25,6 +213,7 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -33,7 +222,7 @@
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
 			});
 		</script>
 	</body>
